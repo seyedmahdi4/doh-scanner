@@ -1,0 +1,5 @@
+https://doh.umbrella.com/dns-query
+https://www.c-dns.com/dns-query
+https://doh.xfinity.com/dns-query
+https://dns.google/dns-query
+https://dns11.quad9.net/dns-query

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ $# -ne 2 ]; then
+    echo "Usage: $0 <filename> <thread_count>"
+    exit 1
+fi
+
+thread_count=$2
+filename=$1
+
+parallel -j $thread_count --line-buffer \
+    'res=$(curl -w "%{http_code}\n" -o /dev/null -sS --doh-url {} http://gmail.com --connect-timeout 5 2> /dev/null); \
+    if [[ $res == "301" ]]; then echo {}; fi' \
+    ::: $(cat "$filename")
