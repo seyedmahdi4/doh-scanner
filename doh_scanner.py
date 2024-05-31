@@ -36,6 +36,7 @@ def resolve_ip(doh_url):
             # ok_doh.append(doh_url)
             with open("tested-doh.txt", 'a') as f:
                 f.write(f"{doh_url}\n")
+            break
     except Exception as e:
         print(f"{doh_url} {filtered} or {bad_ping}!")
 
