@@ -1,5 +1,4 @@
 # doh-scanner
 
-- Usage: ./dohscanner <filename> <thread_count>
-- Example: ./dohscanner dohlist.txt 10
+- Usage: python3 doh_scanner.py
 - get doh list from https://github.com/curl/curl/wiki/DNS-over-HTTPS#publicly-available-servers
